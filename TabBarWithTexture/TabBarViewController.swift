@@ -9,6 +9,16 @@ import AsyncDisplayKit
 
 class TabBarViewController: ASTabBarController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navBottomBar()
+    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navBarBottom()
+//    }
+    
     private var redNavController: ASNavigationController {
         let title = "Red"
         let redViewController = RedViewController()
@@ -33,9 +43,7 @@ class TabBarViewController: ASTabBarController {
         return ASNavigationController(rootViewController: orangeNavController)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    func navBottomBar() {
         UITabBar.appearance().tintColor = .black
         
         self.viewControllers = [
@@ -44,5 +52,6 @@ class TabBarViewController: ASTabBarController {
             orangeNavController
         ]
     }
+    
 }
 

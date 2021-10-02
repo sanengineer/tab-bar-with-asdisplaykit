@@ -29,7 +29,7 @@ class TabBarViewController: ASTabBarController {
         let title = "Orange"
         let orangeNavController = OrangeViewController()
         orangeNavController.title = title
-        orangeNavController.tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: "note.text"), tag: 2)
+        orangeNavController.tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: "person"), tag: 2)
         return ASNavigationController(rootViewController: orangeNavController)
     }
     
